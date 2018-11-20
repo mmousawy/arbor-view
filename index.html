@@ -12,59 +12,169 @@
   <p>Tree views with only CSS or with SVGs.</p>
   <hr>
   <p><b>CSS only:</b></p>
-  <span class="page-title">Page tree</span>
-  <ul class="page-menu">
-    <li class="page-menu__item page-menu__item--has-children">
-      <a href="#">Lorem</a>
-      <ul class="page-submenu">
-        <li class="page-submenu__item"><a href="#">Voluptatem</a></li>
-        <li class="page-submenu__item page-submenu__item--has-children"><a href="#">Amet</a>
+  <div class="trees-row">
+    <div class="tree-holder">
+      <span class="page-title">Page tree A</span>
+      <ul class="page-menu">
+        <li class="page-menu__item">
+          <a href="#">Lorem</a>
           <ul class="page-submenu">
-            <li class="page-submenu__item"><a href="#">Doloremque</a></li>
-            <li class="page-submenu__item"><a href="#">Suscipit</a></li>
+            <li class="page-submenu__item"><a href="#">Voluptatem</a></li>
+            <li class="page-submenu__item"><a href="#">Amet</a>
+              <ul class="page-submenu">
+                <li class="page-submenu__item"><a href="#">Doloremque</a></li>
+                <li class="page-submenu__item"><a href="#">Suscipit</a></li>
+              </ul>
+            </li>
+            <li class="page-submenu__item"><a href="#">Consecutor</a></li>
           </ul>
         </li>
-        <li class="page-submenu__item"><a href="#">Consecutor</a></li>
+        <li class="page-menu__item">
+          <a href="#">Ipsum</a>
+        </li>
+        <li class="page-menu__item">
+          <a href="#">Dolor</a>
+          <ul class="page-submenu">
+            <li class="page-submenu__item"><a href="#">Distinctio</a></li>
+            <li class="page-submenu__item"><a href="#">Delectus</a></li>
+          </ul>
+        </li>
       </ul>
-    </li>
-    <li class="page-menu__item">
-      <a href="#">Ipsum</a>
-    </li>
-    <li class="page-menu__item page-menu__item--has-children">
-      <a href="#">Dolor</a>
-      <ul class="page-submenu">
-        <li class="page-submenu__item"><a href="#">Distinctio</a></li>
-        <li class="page-submenu__item"><a href="#">Delectus</a></li>
+    </div>
+    <div class="tree-holder">
+      <span class="page-title">Page tree B</span>
+      <ul class="page-menu">
+        <li class="page-menu__item">
+          <a href="#">Lorem</a>
+        </li>
       </ul>
-    </li>
-  </ul>
+    </div>
+    <div class="tree-holder">
+      <span class="page-title">Page tree C</span>
+      <ul class="page-menu">
+        <li class="page-menu__item">
+          <code class="tag">survey</code> <span class="quantity">1</span>
+          <ul class="page-submenu">
+            <li class="page-submenu__item"><code class="tag">settings</code> <span class="quantity">1</span>
+              <ul class="page-submenu">
+                <li class="page-submenu__item"><code class="tag">param</code> <span class="quantity">1+</span>
+                  <ul class="page-submenu">
+                    <li class="page-submenu__item"><code class="attr">key</code> <span class="quantity">required</span></li>
+                    <li class="page-submenu__item"><code class="attr">value</code> <span class="quantity">required</span></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="page-submenu__item"><code class="tag">q</code> <span class="quantity">1+</span>
+              <ul class="page-submenu">
+                <li class="page-submenu__item"><code>text</code> <span class="quantity">1</span></li>
+                <li class="page-submenu__item"><code class="tag">o</code> <span class="quantity">1+</span>
+                  <ul class="page-submenu">
+                    <li class="page-submenu__item"><code>text <span class="quantity">1</span></code></li>
+                    <li class="page-submenu__item"><code class="attr">skip</code> <span class="quantity">optional</span></li>
+                    <li class="page-submenu__item"><code class="attr">single</code> <span class="quantity">optional</span></li>
+                    <li class="page-submenu__item"><code class="attr">expand</code> <span class="quantity">optional</span></li>
+                    <li class="page-submenu__item"><code class="attr">min</code> <span class="quantity">optional</span></li>
+                    <li class="page-submenu__item"><code class="attr">max</code> <span class="quantity">optional</span></li>
+                  </ul>
+                </li>
+                <li class="page-submenu__item"><code class="attr">type</code> <span class="quantity">optional</span></li>
+                <li class="page-submenu__item"><code class="attr">required</code> <span class="quantity">optional</span></li>
+              </ul>
+            </li>
+            <li class="page-submenu__item"><code class="tag">c</code> <span class="quantity">0+</span>
+              <ul class="page-submenu">
+                <li class="page-submenu__item"><code class="attr">if</code> <span class="quantity">required</span></li>
+                <li class="page-submenu__item"><code class="attr">then</code> <span class="quantity">required</span></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
   <hr>
   <p><b>SVG:</b></p>
-  <span class="page-title">Page tree</span>
-  <ul class="page-menu page-menu--svg">
-    <li class="page-menu__item page-menu__item--svg page-menu__item--has-children">
-      <a href="#">Lorem</a>
-      <ul class="page-submenu">
-        <li class="page-submenu__item page-submenu__item--svg"><a href="#">Voluptatem</a></li>
-        <li class="page-submenu__item page-submenu__item--svg page-submenu__item--has-children"><a href="#">Amet</a>
+  <div class="trees-row">
+    <div class="tree-holder">
+      <span class="page-title">Page tree A</span>
+      <ul class="page-menu page-menu--svg">
+        <li class="page-menu__item page-menu__item--svg">
+          <a href="#">Lorem</a>
           <ul class="page-submenu">
-            <li class="page-submenu__item page-submenu__item--svg"><a href="#">Doloremque</a></li>
-            <li class="page-submenu__item page-submenu__item--svg"><a href="#">Suscipit</a></li>
+            <li class="page-submenu__item page-submenu__item--svg"><a href="#">Voluptatem</a></li>
+            <li class="page-submenu__item page-submenu__item--svg"><a href="#">Amet</a>
+              <ul class="page-submenu">
+                <li class="page-submenu__item page-submenu__item--svg"><a href="#">Doloremque</a></li>
+                <li class="page-submenu__item page-submenu__item--svg"><a href="#">Suscipit</a></li>
+              </ul>
+            </li>
+            <li class="page-submenu__item page-submenu__item--svg"><a href="#">Consecutor</a></li>
           </ul>
         </li>
-        <li class="page-submenu__item page-submenu__item--svg"><a href="#">Consecutor</a></li>
+        <li class="page-menu__item page-menu__item--svg">
+          <a href="#">Ipsum</a>
+        </li>
+        <li class="page-menu__item page-menu__item--svg">
+          <a href="#">Dolor</a>
+          <ul class="page-submenu">
+            <li class="page-submenu__item page-submenu__item--svg"><a href="#">Distinctio</a></li>
+            <li class="page-submenu__item page-submenu__item--svg"><a href="#">Delectus</a></li>
+          </ul>
+        </li>
       </ul>
-    </li>
-    <li class="page-menu__item page-menu__item--svg">
-      <a href="#">Ipsum</a>
-    </li>
-    <li class="page-menu__item page-menu__item--svg page-menu__item--has-children">
-      <a href="#">Dolor</a>
-      <ul class="page-submenu">
-        <li class="page-submenu__item page-submenu__item--svg"><a href="#">Distinctio</a></li>
-        <li class="page-submenu__item page-submenu__item--svg"><a href="#">Delectus</a></li>
+    </div>
+    <div class="tree-holder">
+      <span class="page-title">Page tree B</span>
+      <ul class="page-menu page-menu--svg">
+        <li class="page-menu__item page-menu__item--svg">
+          <a href="#">Lorem</a>
+        </li>
       </ul>
-    </li>
-  </ul>
+    </div>
+    <div class="tree-holder">
+      <span class="page-title">Page tree C</span>
+      <ul class="page-menu">
+        <li class="page-menu__item page-menu__item--svg">
+          <code class="tag">survey</code> <span class="quantity">1</span>
+          <ul class="page-submenu">
+            <li class="page-submenu__item page-submenu__item--svg"><code class="tag">settings</code> <span class="quantity">1</span>
+              <ul class="page-submenu">
+                <li class="page-submenu__item page-submenu__item--svg"><code class="tag">param</code> <span class="quantity">1+</span>
+                  <ul class="page-submenu">
+                    <li class="page-submenu__item page-submenu__item--svg"><code class="attr">key</code> <span class="quantity">required</span></li>
+                    <li class="page-submenu__item page-submenu__item--svg"><code class="attr">value</code> <span class="quantity">required</span></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="page-submenu__item page-submenu__item--svg"><code class="tag">q</code> <span class="quantity">1+</span>
+              <ul class="page-submenu">
+                <li class="page-submenu__item page-submenu__item--svg"><code>text</code> <span class="quantity">1</span></li>
+                <li class="page-submenu__item page-submenu__item--svg"><code class="tag">o</code> <span class="quantity">1+</span>
+                  <ul class="page-submenu">
+                    <li class="page-submenu__item page-submenu__item--svg"><code>text <span class="quantity">1</span></code></li>
+                    <li class="page-submenu__item page-submenu__item--svg"><code class="attr">skip</code> <span class="quantity">optional</span></li>
+                    <li class="page-submenu__item page-submenu__item--svg"><code class="attr">single</code> <span class="quantity">optional</span></li>
+                    <li class="page-submenu__item page-submenu__item--svg"><code class="attr">expand</code> <span class="quantity">optional</span></li>
+                    <li class="page-submenu__item page-submenu__item--svg"><code class="attr">min</code> <span class="quantity">optional</span></li>
+                    <li class="page-submenu__item page-submenu__item--svg"><code class="attr">max</code> <span class="quantity">optional</span></li>
+                  </ul>
+                </li>
+                <li class="page-submenu__item page-submenu__item--svg"><code class="attr">type</code> <span class="quantity">optional</span></li>
+                <li class="page-submenu__item page-submenu__item--svg"><code class="attr">required</code> <span class="quantity">optional</span></li>
+              </ul>
+            </li>
+            <li class="page-submenu__item page-submenu__item--svg"><code class="tag">c</code> <span class="quantity">0+</span>
+              <ul class="page-submenu">
+                <li class="page-submenu__item page-submenu__item--svg"><code class="attr">if</code> <span class="quantity">required</span></li>
+                <li class="page-submenu__item page-submenu__item--svg"><code class="attr">then</code> <span class="quantity">required</span></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>

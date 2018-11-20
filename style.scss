@@ -19,11 +19,39 @@ hr {
   background-color: lightgrey;
 }
 
+.trees-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tree-holder {
+  margin: 1rem 2rem 1rem 0;
+}
+
+a {
+  color: slateblue;
+}
+
+code {
+  font-size: 1.25rem;
+  color: palevioletred;
+}
+
+.quantity {
+  font-size: .75rem;
+  vertical-align: top;
+  color: lighten(black, 60%);
+}
+
 // Tree view styling
+$line-height: 2em;
+$font-size: 1rem;
+
 .page-title {
   display: inline-block;
-  height: 2rem;
-  line-height: 1.75rem;
+  height: $line-height;
+  line-height: $line-height;
+  font-size: $font-size;
 }
 
 .page-menu,
@@ -31,37 +59,44 @@ hr {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-size: $font-size;
 }
 
 .page-menu__item,
 .page-submenu__item {
   position: relative;
-  padding-left: 2.5rem;
+  padding-left: $line-height + .5em;
 
-  a {
+  > a,
+  > code,
+  > span {
     display: inline-block;
-    height: 2rem;
-    line-height: 1.75rem;
+    height: $line-height;
+    line-height: $line-height;
   }
 
-  &:not(:last-child)::before {
+  &::before {
     content: '';
     display: block;
     position: absolute;
     top: 0;
-    bottom: -.8em;
-    left: 1em;
+    bottom: 0;
+    left: $line-height * .5;
     width: .0625em;
     background-color: currentColor;
+  }
+
+  &:last-child::before {
+    height: $line-height * .5;
   }
 
   &::after {
     content: '';
     display: block;
     position: absolute;
-    top: .8em;
-    left: 1em;
-    width: 1rem;
+    top: $line-height * .5;
+    left: $line-height * .5;
+    width: $line-height * .5;
     height: .0625em;
     background-color: currentColor;
   }
@@ -71,12 +106,12 @@ hr {
 .page-menu__item,
 .page-submenu__item {
   position: relative;
-  padding-left: 2.5rem;
+  padding-left: $line-height + .5em;
 
   a {
     display: inline-block;
-    height: 2rem;
-    line-height: 1.75rem;
+    height: $line-height;
+    line-height: $line-height;
   }
 
   &--svg {
@@ -84,26 +119,29 @@ hr {
       content: '';
       background-color: transparent;
       background-image: url('icon-node-straight.svg');
-      background-size: 2rem;
+      background-position: $line-height * .5 0;
+      background-size: $line-height;
       display: block;
       position: absolute;
       left: 0;
+      bottom: 0;
       top: 0;
-      width: 2rem;
-      height: 100%;
+      width: $line-height;
     }
 
     &::after {
       content: '';
       background-color: transparent;
       background-image: url('icon-node-elbow.svg');
-      background-size: 2rem;
+      background-repeat: repeat-x;
+      background-position: 0 $line-height * .5;
+      background-size: $line-height;
       display: block;
       position: absolute;
-      left: 0;
       top: 0;
-      width: 2rem;
-      height: 2rem;
+      left: 0;
+      width: $line-height;
+      height: $line-height;
     }
   }
 }
