@@ -1,51 +1,7 @@
-// Demo styling
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: sans-serif;
-}
-
-body {
-  max-width: 50rem;
-  margin: 2rem auto;
-  padding: 0 2rem;
-}
-
-hr {
-  height: 1px;
-  border: 0;
-  margin: 2rem 0;
-  background-color: lightgrey;
-}
-
-.trees-row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.tree-holder {
-  margin: 1rem 2rem 1rem 0;
-}
-
-a {
-  color: slateblue;
-}
-
-code {
-  font-size: 1.25rem;
-  color: palevioletred;
-}
-
-.quantity {
-  font-size: .75rem;
-  vertical-align: top;
-  color: lighten(black, 60%);
-}
-
 // Tree view styling
 $line-height: 2em;
 $font-size: 1rem;
+$border-radius: 4px;
 
 .page-title {
   display: inline-block;
@@ -102,46 +58,179 @@ $font-size: 1rem;
   }
 }
 
-// SVG tree lines
-.page-menu__item,
-.page-submenu__item {
+// Rounded last child elbow
+.page-title {
+  display: inline-block;
+  height: $line-height;
+  line-height: $line-height;
+  font-size: $font-size;
+}
+
+.page-menu,
+.page-submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: $font-size;
+}
+
+.page-menu__item--rounded,
+.page-submenu__item--rounded {
   position: relative;
   padding-left: $line-height + .5em;
 
-  a {
+  > a,
+  > code,
+  > span {
     display: inline-block;
     height: $line-height;
     line-height: $line-height;
   }
 
-  &--svg {
-    &:not(:last-child)::before {
-      content: '';
-      background-color: transparent;
-      background-image: url('icon-node-straight.svg');
-      background-position: $line-height * .5 0;
-      background-size: $line-height;
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      top: 0;
-      width: $line-height;
-    }
-
-    &::after {
-      content: '';
-      background-color: transparent;
-      background-image: url('icon-node-elbow.svg');
-      background-repeat: repeat-x;
-      background-position: 0 $line-height * .5;
-      background-size: $line-height;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: $line-height;
-      height: $line-height;
-    }
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: $line-height * .5;
+    width: .0625em;
+    background-color: currentColor;
   }
+
+  &:last-child::before {
+    height: calc(#{$line-height * .5} - #{$border-radius});
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: $line-height * .5;
+    left: $line-height * .5;
+    width: $line-height * .5;
+    height: .0625em;
+    background-color: currentColor;
+  }
+
+  &:last-child::after {
+    top: calc(#{$line-height * .5} - #{$border-radius});
+    height: $border-radius;
+    border-color: currentColor;
+    border-style: solid;
+    border-width: 0 0 .0625em .0625em;
+    border-bottom-left-radius: $border-radius;
+    background-color: transparent;
+  }
+}
+
+// SVG tree lines
+.page-menu__item--svg,
+.page-submenu__item--svg {
+  position: relative;
+  padding-left: $line-height + .5em;
+
+  > a,
+  > code,
+  > span {
+    display: inline-block;
+    height: $line-height;
+    line-height: $line-height;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: $line-height;
+    background-color: transparent;
+    background-image: url('icon-node-straight.svg');
+    background-position: $line-height * .5 0;
+    background-size: $line-height;
+  }
+
+  &:last-child::before {
+    height: $font-size;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $line-height;
+    height: $line-height;
+    background-color: transparent;
+    background-image: url('icon-node-elbow.svg');
+    background-repeat: repeat-x;
+    background-position: 0 $line-height * .5;
+    background-size: $line-height;
+  }
+}
+
+// Demo styling
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  max-width: 50rem;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  color: lighten(black, 20%);
+}
+
+h1 {
+  line-height: 3rem;
+}
+
+.arbor-logo {
+  width: 3rem;
+  margin-right: 1rem;
+  vertical-align: top;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  margin: 2rem 0;
+  background-color: lightgrey;
+}
+
+.trees-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tree-holder {
+  width: 33%;
+  padding: 1rem 2rem 1rem 0;
+
+  @media screen and (max-width: 40rem) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 30rem) {
+    width: 100%;
+  }
+}
+
+a {
+  color: slateblue;
+}
+
+code {
+  font-size: $font-size * 1.25;
+  color: palevioletred;
 }
