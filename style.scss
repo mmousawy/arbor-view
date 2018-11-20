@@ -1,0 +1,52 @@
+html,
+body {
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.page-title {
+  display: inline-block;
+  height: 2rem;
+  line-height: 1.75rem;
+}
+
+.page-menu,
+.page-submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-menu__item,
+.page-submenu__item {
+  position: relative;
+  padding-left: 2.5rem;
+
+  a {
+    display: inline-block;
+    height: 2rem;
+    line-height: 1.75rem;
+  }
+
+  &::before {
+    content: '';
+    background-image: url('icon-node-elbow.svg');
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &:not(:last-child)::after {
+    content: '';
+    background-image: url('icon-node-straight.svg');
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0rem;
+    width: 2rem;
+    height: 100%;
+  }
+}
