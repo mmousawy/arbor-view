@@ -1,0 +1,38 @@
+// CSS tree with a rounded last child branch
+.arbor-tree__branch {
+  .arbor-tree--rounded & {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: $line-height * .5;
+      width: .0625em;
+    }
+
+    &:last-child::before {
+      height: calc(#{$line-height * .5} - #{$border-radius});
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: $line-height * .5;
+      left: $line-height * .5;
+      width: $line-height * .5;
+      height: .0625em;
+    }
+
+    &:last-child::after {
+      top: calc(#{$line-height * .5} - #{$border-radius});
+      height: $border-radius;
+      border-color: $branch-color;
+      border-style: solid;
+      border-width: 0 0 .0625em .0625em;
+      border-bottom-left-radius: $border-radius;
+      background-color: transparent;
+    }
+  }
+}

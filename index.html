@@ -8,84 +8,84 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1><img src="arbor-logo.svg" class="arbor-logo">Arbor View</h1>
+  <h1><img src="assets/img/arbor-logo.svg" class="arbor-logo">Arbor View</h1>
   <p>Create beautiful tree views with CSS only or SVG based techniques.</p>
   <hr>
-  <p><b>CSS only:</b></p>
+  <p><b>CSS only:</b> dynamic branch colours, branch radius and collapsible.</p>
   <div class="trees-row">
     <div class="tree-holder">
-      <span class="page-title">Page tree A</span>
-      <ul class="page-menu">
-        <li class="page-menu__item">
+      <span class="arbor-head">Page tree A</span>
+      <ul class="arbor-tree">
+        <li class="arbor-tree__branch">
           <a href="#">Lorem</a>
-          <ul class="page-submenu">
-            <li class="page-submenu__item"><a href="#">Voluptatem</a></li>
-            <li class="page-submenu__item"><a href="#">Amet</a>
-              <ul class="page-submenu">
-                <li class="page-submenu__item"><a href="#">Doloremque</a></li>
-                <li class="page-submenu__item"><a href="#">Suscipit</a></li>
+          <ul class="arbor-tree">
+            <li class="arbor-tree__branch"><a href="#">Voluptatem</a></li>
+            <li class="arbor-tree__branch"><a href="#">Amet</a>
+              <ul class="arbor-tree">
+                <li class="arbor-tree__branch"><a href="#">Doloremque</a></li>
+                <li class="arbor-tree__branch"><a href="#">Suscipit</a></li>
               </ul>
             </li>
-            <li class="page-submenu__item"><a href="#">Consecutor</a></li>
+            <li class="arbor-tree__branch"><a href="#">Consecutor</a></li>
           </ul>
         </li>
-        <li class="page-menu__item">
+        <li class="arbor-tree__branch">
           <a href="#">Ipsum</a>
         </li>
-        <li class="page-menu__item">
+        <li class="arbor-tree__branch">
           <a href="#">Dolor</a>
-          <ul class="page-submenu">
-            <li class="page-submenu__item"><a href="#">Distinctio</a></li>
-            <li class="page-submenu__item"><a href="#">Delectus</a></li>
+          <ul class="arbor-tree">
+            <li class="arbor-tree__branch"><a href="#">Distinctio</a></li>
+            <li class="arbor-tree__branch"><a href="#">Delectus</a></li>
           </ul>
         </li>
       </ul>
     </div>
     <div class="tree-holder">
-      <span class="page-title">Page tree B</span>
-      <ul class="page-menu">
-        <li class="page-menu__item">
+      <span class="arbor-head">Page tree B</span>
+      <ul class="arbor-tree">
+        <li class="arbor-tree__branch">
           <a href="#">Lorem</a>
         </li>
       </ul>
     </div>
     <div class="tree-holder">
-      <span class="page-title">Page tree C</span>
-      <ul class="page-menu">
-        <li class="page-menu__item--rounded">
-          <code>survey</code>
-          <ul class="page-submenu">
-            <li class="page-submenu__item--rounded"><code>settings</code>
-              <ul class="page-submenu">
-                <li class="page-submenu__item--rounded"><code>param</code>
-                  <ul class="page-submenu">
-                    <li class="page-submenu__item--rounded"><code>key</code> </li>
-                    <li class="page-submenu__item--rounded"><code>value</code> </li>
+      <span class="arbor-head">Page tree C</span>
+      <ul class="arbor-tree arbor-tree--rounded">
+        <li class="arbor-tree__branch">
+          <input type="checkbox" class="arbor-collapse" id="collapse-survey" checked><label for="collapse-survey"><code>survey</code></label>
+          <ul class="arbor-tree">
+            <li class="arbor-tree__branch"><input type="checkbox" class="arbor-collapse" id="collapse-settings"><label for="collapse-settings"><code>settings</code></label>
+              <ul class="arbor-tree">
+                <li class="arbor-tree__branch"><input type="checkbox" class="arbor-collapse" id="collapse-param"><label for="collapse-param"><code>param</code></label>
+                  <ul class="arbor-tree">
+                    <li class="arbor-tree__branch"><code>key</code> </li>
+                    <li class="arbor-tree__branch"><code>value</code> </li>
                   </ul>
                 </li>
               </ul>
             </li>
-            <li class="page-submenu__item--rounded"><code>question</code>
-              <ul class="page-submenu">
-                <li class="page-submenu__item--rounded"><code>text</code> </li>
-                <li class="page-submenu__item--rounded"><code>option</code>
-                  <ul class="page-submenu">
-                    <li class="page-submenu__item--rounded"><code>text </code></li>
-                    <li class="page-submenu__item--rounded"><code>skip</code> </li>
-                    <li class="page-submenu__item--rounded"><code>single</code> </li>
-                    <li class="page-submenu__item--rounded"><code>expand</code> </li>
-                    <li class="page-submenu__item--rounded"><code>min</code> </li>
-                    <li class="page-submenu__item--rounded"><code>max</code> </li>
+            <li class="arbor-tree__branch"><input type="checkbox" class="arbor-collapse" id="collapse-question"><label for="collapse-question"><code>question</code></label>
+              <ul class="arbor-tree">
+                <li class="arbor-tree__branch"><code>text</code> </li>
+                <li class="arbor-tree__branch"><input type="checkbox" class="arbor-collapse" id="collapse-option"><label for="collapse-option"><code>option</code></label>
+                  <ul class="arbor-tree">
+                    <li class="arbor-tree__branch"><code>text </code></li>
+                    <li class="arbor-tree__branch"><code>skip</code> </li>
+                    <li class="arbor-tree__branch"><code>single</code> </li>
+                    <li class="arbor-tree__branch"><code>expand</code> </li>
+                    <li class="arbor-tree__branch"><code>min</code> </li>
+                    <li class="arbor-tree__branch"><code>max</code> </li>
                   </ul>
                 </li>
-                <li class="page-submenu__item--rounded"><code>type</code> </li>
-                <li class="page-submenu__item--rounded"><code>required</code> </li>
+                <li class="arbor-tree__branch"><code>type</code> </li>
+                <li class="arbor-tree__branch"><code>required</code> </li>
               </ul>
             </li>
-            <li class="page-submenu__item--rounded"><code>condition</code>
-              <ul class="page-submenu">
-                <li class="page-submenu__item--rounded"><code>if</code> </li>
-                <li class="page-submenu__item--rounded"><code>then</code> </li>
+            <li class="arbor-tree__branch"><input type="checkbox" class="arbor-collapse" id="collapse-condition"><label for="collapse-condition"><code>condition</code></label>
+              <ul class="arbor-tree">
+                <li class="arbor-tree__branch"><code>if</code> </li>
+                <li class="arbor-tree__branch"><code>then</code> </li>
               </ul>
             </li>
           </ul>
@@ -94,81 +94,81 @@
     </div>
   </div>
   <hr>
-  <p><b>SVG:</b></p>
+  <p><b>SVG:</b> collapsible.</p>
   <div class="trees-row">
     <div class="tree-holder">
-      <span class="page-title">Page tree A</span>
-      <ul class="page-menu page-menu--svg">
-        <li class="page-menu__item--svg">
+      <span class="arbor-head">Page tree A</span>
+      <ul class="arbor-tree arbor-tree--svg">
+        <li class="arbor-tree__branch">
           <a href="#">Lorem</a>
-          <ul class="page-submenu">
-            <li class="page-submenu__item--svg"><a href="#">Voluptatem</a></li>
-            <li class="page-submenu__item--svg"><a href="#">Amet</a>
-              <ul class="page-submenu">
-                <li class="page-submenu__item--svg"><a href="#">Doloremque</a></li>
-                <li class="page-submenu__item--svg"><a href="#">Suscipit</a></li>
+          <ul class="arbor-tree">
+            <li class="arbor-tree__branch"><a href="#">Voluptatem</a></li>
+            <li class="arbor-tree__branch"><a href="#">Amet</a>
+              <ul class="arbor-tree">
+                <li class="arbor-tree__branch"><a href="#">Doloremque</a></li>
+                <li class="arbor-tree__branch"><a href="#">Suscipit</a></li>
               </ul>
             </li>
-            <li class="page-submenu__item--svg"><a href="#">Consecutor</a></li>
+            <li class="arbor-tree__branch"><a href="#">Consecutor</a></li>
           </ul>
         </li>
-        <li class="page-menu__item--svg">
+        <li class="arbor-tree__branch">
           <a href="#">Ipsum</a>
         </li>
-        <li class="page-menu__item--svg">
+        <li class="arbor-tree__branch">
           <a href="#">Dolor</a>
-          <ul class="page-submenu">
-            <li class="page-submenu__item--svg"><a href="#">Distinctio</a></li>
-            <li class="page-submenu__item--svg"><a href="#">Delectus</a></li>
+          <ul class="arbor-tree">
+            <li class="arbor-tree__branch"><a href="#">Distinctio</a></li>
+            <li class="arbor-tree__branch"><a href="#">Delectus</a></li>
           </ul>
         </li>
       </ul>
     </div>
     <div class="tree-holder">
-      <span class="page-title">Page tree B</span>
-      <ul class="page-menu page-menu--svg">
-        <li class="page-menu__item--svg">
+      <span class="arbor-head">Page tree B</span>
+      <ul class="arbor-tree arbor-tree--svg">
+        <li class="arbor-tree__branch">
           <a href="#">Lorem</a>
         </li>
       </ul>
     </div>
     <div class="tree-holder">
-      <span class="page-title">Page tree C</span>
-      <ul class="page-menu">
-        <li class="page-menu__item--svg">
-          <code>survey</code>
-          <ul class="page-submenu">
-            <li class="page-submenu__item--svg"><code>settings</code>
-              <ul class="page-submenu">
-                <li class="page-submenu__item--svg"><code>param</code>
-                  <ul class="page-submenu">
-                    <li class="page-submenu__item--svg"><code>key</code> </li>
-                    <li class="page-submenu__item--svg"><code>value</code> </li>
+      <span class="arbor-head">Page tree C</span>
+      <ul class="arbor-tree arbor-tree--svg">
+        <li class="arbor-tree__branch">
+          <input type="checkbox" class="arbor-collapse" id="collapse-survey" checked><label for="collapse-survey"><code>survey</code></label>
+          <ul class="arbor-tree">
+            <li class="arbor-tree__branch"><input type="checkbox" class="arbor-collapse" id="collapse-settings"><label for="collapse-settings"><code>settings</code></label>
+              <ul class="arbor-tree">
+                <li class="arbor-tree__branch"><input type="checkbox" class="arbor-collapse" id="collapse-param"><label for="collapse-param"><code>param</code></label>
+                  <ul class="arbor-tree">
+                    <li class="arbor-tree__branch"><code>key</code> </li>
+                    <li class="arbor-tree__branch"><code>value</code> </li>
                   </ul>
                 </li>
               </ul>
             </li>
-            <li class="page-submenu__item--svg"><code>q</code>
-              <ul class="page-submenu">
-                <li class="page-submenu__item--svg"><code>text</code> </li>
-                <li class="page-submenu__item--svg"><code>o</code>
-                  <ul class="page-submenu">
-                    <li class="page-submenu__item--svg"><code>text </code></li>
-                    <li class="page-submenu__item--svg"><code>skip</code> </li>
-                    <li class="page-submenu__item--svg"><code>single</code> </li>
-                    <li class="page-submenu__item--svg"><code>expand</code> </li>
-                    <li class="page-submenu__item--svg"><code>min</code> </li>
-                    <li class="page-submenu__item--svg"><code>max</code> </li>
+            <li class="arbor-tree__branch"><input type="checkbox" class="arbor-collapse" id="collapse-question"><label for="collapse-question"><code>question</code></label>
+              <ul class="arbor-tree">
+                <li class="arbor-tree__branch"><code>text</code> </li>
+                <li class="arbor-tree__branch"><input type="checkbox" class="arbor-collapse" id="collapse-option"><label for="collapse-option"><code>option</code></label>
+                  <ul class="arbor-tree">
+                    <li class="arbor-tree__branch"><code>text </code></li>
+                    <li class="arbor-tree__branch"><code>skip</code> </li>
+                    <li class="arbor-tree__branch"><code>single</code> </li>
+                    <li class="arbor-tree__branch"><code>expand</code> </li>
+                    <li class="arbor-tree__branch"><code>min</code> </li>
+                    <li class="arbor-tree__branch"><code>max</code> </li>
                   </ul>
                 </li>
-                <li class="page-submenu__item--svg"><code>type</code> </li>
-                <li class="page-submenu__item--svg"><code>required</code> </li>
+                <li class="arbor-tree__branch"><code>type</code> </li>
+                <li class="arbor-tree__branch"><code>required</code> </li>
               </ul>
             </li>
-            <li class="page-submenu__item--svg"><code>c</code>
-              <ul class="page-submenu">
-                <li class="page-submenu__item--svg"><code>if</code> </li>
-                <li class="page-submenu__item--svg"><code>then</code> </li>
+            <li class="arbor-tree__branch"><input type="checkbox" class="arbor-collapse" id="collapse-condition"><label for="collapse-condition"><code>condition</code></label>
+              <ul class="arbor-tree">
+                <li class="arbor-tree__branch"><code>if</code> </li>
+                <li class="arbor-tree__branch"><code>then</code> </li>
               </ul>
             </li>
           </ul>

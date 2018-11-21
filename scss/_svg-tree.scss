@@ -1,0 +1,65 @@
+// SVG tree
+$line-height: $line-height;
+$font-size: $font-size;
+
+.arbor-head {
+  display: inline-block;
+  height: $line-height;
+  line-height: $line-height;
+  font-size: $font-size;
+}
+
+.arbor-tree {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: $font-size;
+}
+
+.arbor-tree__branch {
+  position: relative;
+  padding-left: $line-height + .5em;
+
+  > a,
+  > code,
+  > span {
+    display: inline-block;
+    height: $line-height;
+    line-height: $line-height;
+  }
+
+  .arbor-tree--svg & {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: $line-height;
+      background-color: transparent;
+      background-image: url('assets/img/icon-node-straight.svg');
+      background-position: $line-height * .5 0;
+      background-size: $line-height;
+    }
+
+    &:last-child::before {
+      height: $font-size;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $line-height;
+      height: $line-height;
+      background-color: transparent;
+      background-image: url('assets/img/icon-node-elbow.svg');
+      background-repeat: repeat-x;
+      background-position: 0 $line-height * .5;
+      background-size: $line-height;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+// CSS tree
+$line-height: $line-height;
+$font-size: $font-size;
+$branch-color: #8A9BA8;
+
+.arbor-head {
+  display: inline-block;
+  height: $line-height;
+  line-height: $line-height;
+  font-size: $font-size;
+}
+
+.arbor-tree {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: $font-size;
+}
+
+.arbor-tree__branch {
+  position: relative;
+  padding-left: $line-height + .5em;
+
+  > a,
+  > code,
+  > span {
+    display: inline-block;
+    height: $line-height;
+    line-height: $line-height;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: $line-height * .5;
+    width: .0625em;
+    background-color: $branch-color;
+  }
+
+  &:last-child::before {
+    height: $line-height * .5;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: $line-height * .5;
+    left: $line-height * .5;
+    width: $line-height * .5;
+    height: .0625em;
+    background-color: $branch-color;
+  }
+}
