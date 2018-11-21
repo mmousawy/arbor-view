@@ -1,4 +1,6 @@
 // CSS tree with a rounded last child branch
+$border-radius: $demo-border-radius;
+
 .arbor-tree__branch {
   .arbor-tree--rounded & {
     &::before {
@@ -12,21 +14,21 @@
     }
 
     &:last-child::before {
-      height: calc(#{$line-height * .5} - #{$border-radius});
+      height: calc(#{$line-height * .5 + $line-margin} - #{$border-radius});
     }
 
     &::after {
       content: '';
       display: block;
       position: absolute;
-      top: $line-height * .5;
+      top: $line-height * .5 + $line-margin;
       left: $line-height * .5;
       width: $line-height * .5;
       height: .0625em;
     }
 
     &:last-child::after {
-      top: calc(#{$line-height * .5} - #{$border-radius});
+      top: calc(#{$line-height * .5 + $line-margin} - #{$border-radius});
       height: $border-radius;
       border-color: $branch-color;
       border-style: solid;

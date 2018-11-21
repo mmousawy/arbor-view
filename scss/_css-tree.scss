@@ -1,6 +1,7 @@
 // CSS tree
-$line-height: $line-height;
-$font-size: $font-size;
+$line-height: $demo-line-height;
+$font-size: $demo-font-size;
+$line-margin: $demo-line-margin;
 $branch-color: #8A9BA8;
 
 .arbor-head {
@@ -23,10 +24,11 @@ $branch-color: #8A9BA8;
 
   > a,
   > code,
-  > span {
+  > span,
+  > label {
     display: inline-block;
-    height: $line-height;
     line-height: $line-height;
+    margin: $line-margin 0;
   }
 
   &::before {
@@ -41,14 +43,14 @@ $branch-color: #8A9BA8;
   }
 
   &:last-child::before {
-    height: $line-height * .5;
+    height: $line-height * .5 + $line-margin;
   }
 
   &::after {
     content: '';
     display: block;
     position: absolute;
-    top: $line-height * .5;
+    top: $line-height * .5 + $line-margin;
     left: $line-height * .5;
     width: $line-height * .5;
     height: .0625em;

@@ -4,8 +4,6 @@ $font-size: $font-size;
 
 .arbor-head {
   display: inline-block;
-  height: $line-height;
-  line-height: $line-height;
   font-size: $font-size;
 }
 
@@ -22,10 +20,9 @@ $font-size: $font-size;
 
   > a,
   > code,
-  > span {
+  > span,
+  > label {
     display: inline-block;
-    height: $line-height;
-    line-height: $line-height;
   }
 
   .arbor-tree--svg & {
@@ -58,7 +55,7 @@ $font-size: $font-size;
       background-color: transparent;
       background-image: url('assets/img/icon-node-elbow.svg');
       background-repeat: repeat-x;
-      background-position: 0 $line-height * .5;
+      background-position: 0 $line-height * .5  + $line-margin;
       background-size: $line-height;
     }
   }
